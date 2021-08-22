@@ -1,6 +1,6 @@
 # Laravel8
 
-### [统一格式化返回 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/WXController.php#L30 "统一格式化返回")
+### [统一格式化返回 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/WXController.php#L32 "统一格式化返回")
 
 ### [异常的统一处理 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Exceptions "异常的统一处理")
 
@@ -48,6 +48,8 @@
 - [可用的验证规则 :arrow_right:](https://learnku.com/docs/laravel/8.x/validation/9374#189a36 "可用的验证规则")
 
 ### [参数过长问题 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Inputs "参数过长问题")
+
+- 和上面的问题放在一起优化了
 
 ### IDE代码提示优化
 
