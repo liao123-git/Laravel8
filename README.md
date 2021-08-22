@@ -1,8 +1,8 @@
 # Laravel8
 
-### [统一格式化返回 :arrow_right:](https://github.com/hecheng1996lzg/LaravelClass/tree/main/Namespace "统一格式化返回")
+### [统一格式化返回 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/WXController.php#L30 "统一格式化返回")
 
-### [异常的统一处理 :arrow_right:](https://github.com/hecheng1996lzg/LaravelClass/tree/main/Namespace "异常的统一处理")
+### [异常的统一处理 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Exceptions "异常的统一处理")
 
 - Handler.php
 - `$dontReport`数组为不上报给错误日志的类名
@@ -16,7 +16,8 @@
 不要频繁的实例化一个类，可能会影响到性能。所以需要用到[单例模式](https://github.com/liao123-git/Design_Pattern/tree/main/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F "单例模式")
 。
 
-- [样例 :arrow_right:](https://github.com/hecheng1996lzg/LaravelClass/tree/main/Namespace "样例")
+- [样例 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Servers "样例")
+- [使用 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/AuthController.php#L34 "使用")
 
 ### 解决跨域问题
 
@@ -26,27 +27,27 @@
 ### 登录接口
 
 - [封装好的JWT :arrow_right:](https://github.com/tymondesigns/jwt-auth "JWT")
-- [样例 :arrow_right:](https://github.com/tymondesigns/jwt-auth "登录接口")
+- [样例 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/AuthController.php#L47 "登录接口")
 
 ### JWT原理
 
 - [大佬教程 :arrow_right:](https://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html "JSON Web Token 入门教程")
 - 我们用的[`jwt-auth`](https://github.com/tymondesigns/jwt-auth "JWT")组件，在`JWT`的`Payload`处，跟官方规定相比多了一个字段`prv`
   ，是用来判断当前用户属于哪个模型
-- [`jwt-auth`的配置](https://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html "jwt-auth的配置")
+- [`jwt-auth`的配置](https://github.com/liao123-git/Laravel8/blob/main/laravel/config/jwt.php "jwt-auth的配置")
 - `ttl`: 原始`token`的过期时间，单位为分钟
 - `lock_subject`: 是否区分用户模型，是否生成`prv`
 - `decrypt_cookies`: 是否加密。`laravel`默认加密，所以如果使用`cookies`传递，需要改成`true`
 
-### [统一鉴权认证 :arrow_right:](https://github.com/tymondesigns/jwt-auth "统一鉴权认证")
+### [统一鉴权认证 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/WXController.php#L17 "统一鉴权认证")
 
-### [模型数据格式转换 :arrow_right:](https://github.com/tymondesigns/jwt-auth "返回值全部改成驼峰写法")
+### [模型数据格式转换 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Models/BaseModel.php#L17 "返回值全部改成驼峰写法")
 
-### [参数验证 :arrow_right:](https://github.com/tymondesigns/jwt-auth "参数验证")
+### [参数验证 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Inputs "参数验证")
 
 - [可用的验证规则 :arrow_right:](https://learnku.com/docs/laravel/8.x/validation/9374#189a36 "可用的验证规则")
 
-### [参数过长问题 :arrow_right:](https://github.com/tymondesigns/jwt-auth "参数过长问题")
+### [参数过长问题 :arrow_right:](https://github.com/liao123-git/Laravel8/tree/main/laravel/app/Inputs "参数过长问题")
 
 ### IDE代码提示优化
 
@@ -62,7 +63,7 @@
           /** @var User $user */
           $user = Auth::guard('wx')->user();
       ```
-- [样例 :arrow_right:](https://github.com/tymondesigns/jwt-auth "登录接口")
+- [样例 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Http/Controllers/WX/AuthController.php#L26 "样例")
 
 ### 软删除
 
@@ -111,11 +112,11 @@
 
 ### 任务队列
 - [官方文档 :arrow_right:](https://learnku.com/docs/laravel/8.x/queues/9398 "官方文档")
-- [样例 :arrow_right:](https://learnku.com/docs/laravel/8.x/queues/9398 "样例")
+- [样例 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Jobs/OrderUnpaidTime.php "样例")
 
 ### 乐观锁
-- [什么是乐观锁 :arrow_right:](https://learnku.com/docs/laravel/8.x/queues/9398 "什么是乐观锁")
+- [什么是乐观锁 :arrow_right:](https://www.jianshu.com/p/d2ac26ca6525 "什么是乐观锁")
 - `getDirty`可以获取到该模型对象上还未被`save()`的值
 - `getOriginal`可以获取到该模型对象上还未被`save()`的被修改之前的值
-- [样例 :arrow_right:](https://learnku.com/docs/laravel/8.x/queues/9398 "样例")
-  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
+- [样例 :arrow_right:](https://github.com/liao123-git/Laravel8/blob/main/laravel/app/Models/BaseModel.php#L32 "样例")
+  

@@ -37,6 +37,7 @@ class BaseInputs
 
     public function rules()
     {
+        // 验证规则在各自的 Inputs 文件中
     }
 
     /**
@@ -46,6 +47,7 @@ class BaseInputs
      */
     public static function new($data = null)
     {
+        // 使用 UserInputs::new($request->input());
         return (new static())->fill($data);
     }
 }

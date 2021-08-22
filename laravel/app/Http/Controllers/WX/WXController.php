@@ -25,6 +25,8 @@ class WXController extends Controller
         }
 
         $this->middleware("auth:wx", $option);
+        // 在需要用到的控制器中写入 protected $only = [需要登录之后才能使用的方法]; 或 protected $except = [无需登录就能使用的方法];
+        // 看哪个方便用哪个，不能同时写两个，会被覆盖
     }
 
     protected function codeReturn($data = null)
