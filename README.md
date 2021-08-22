@@ -118,3 +118,4 @@
 - `getDirty`可以获取到该模型对象上还未被`save()`的值
 - `getOriginal`可以获取到该模型对象上还未被`save()`的被修改之前的值
 - [样例 :arrow_right:](https://learnku.com/docs/laravel/8.x/queues/9398 "样例")
+  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
